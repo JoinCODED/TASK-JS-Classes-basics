@@ -72,10 +72,8 @@ class Movie {
     this.genre = genre;
     this.rating = [];
   }
-  rate = (newRating) =>
-    newRating >= 0 && newRating <= 10
-      ? this.rating.push(newRating)
-      : function () {};
+  rate = (newRating) => newRating >= 0 && newRating <= 10 &&  this.rating.push(newRating)
+      
 
   averageRating = () => this.rating.reduce((a, b) => (a + b) / 2);
 }
